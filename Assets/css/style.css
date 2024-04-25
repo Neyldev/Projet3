@@ -9,10 +9,10 @@
     --filter-bg-color: #DEEBFF;
 }
 
-/****** General ***********/
+/*********** General ***********/
 
 
-/****** Fin Class Réutilisable ***********/
+/*****************/
 .fa-solid {
     color: var(--main-color);
 }
@@ -25,31 +25,674 @@
     font-weight: 700;
 }
 
-.section-title {
-    margin: 0;
-    font-size: 22px;
-}
-
-
-/****** Fin Class Réutilisable ***********/
-
-body {
-    display: flex;
-    justify-content: center;
+main {
     width: 100%;
     max-width: 1440px;
-    padding: 0 50px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 6fr 3fr;
+    grid-gap: 2.5em;
+}
+
+a {
+    color: black;
+}
+
+body {
+    padding: 0 2.5em;
+}
+
+/******* Header *******/
+header {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    max-width: 1440px;
+    margin: auto;
+}
+
+header a img {
+    width: 50%;
+}
+
+header nav {
+    height: 100%;
+}
+
+header nav ul {
+    display: flex;
+    flex-flow: row wrap;
+    height: 100%;
+    gap: 15px;
+}
+
+header nav ul a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    color: black;
+    border-top: 4px #ffffff solid;
+}
+
+header nav ul li a:hover {
+    color: var(--main-color);
+    border-top: 4px var(--main-color) solid;
+}
+
+/*********** Section Info  ***********/
+
+.SectionInfoGroup {
+    grid-row: 1;
+    grid-column: 1 / 3;
+    padding-bottom: 0em;
+    margin-top: 40px;
+
+}
+
+.SectionInfoGroup h1 {
+    padding-bottom: 7px;
+}
+
+.SectionInfoGroup p {
+    font-size: larger;
+}
+
+/*********** Formulaire / Bouton  ***********/
+
+form {
+    display: flex;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.fa-color-black {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+
+    width: 50px;
+    height: 49px;
+
+    background-color: var(--main-bg-color);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+input {
+    height: 49px;
+    padding: 0px;
+    margin: 0px;
+    border-top: 1px solid rgba(242, 242, 242, 255);
+    border-bottom: 1px solid rgba(242, 242, 242, 255);
+    border-left: none;
+    border-right: none;
+    font-weight: bold;
+}
+
+input::placeholder {
+
+    /* position: relative;
+    Top: 14px;
+    Left: 74px; */
+    text-align: center;
+    font-size: larger;
+    color: black;
+}
+
+.BoutonText {
+    height: 49px;
+
+    color: white;
+    font-weight: bold;
+    font-size: larger;
+
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: none;
+
+    background-color: var(--main-color);
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.BoutonText:hover {
+    opacity: 75%;
+}
+
+.BoutonIcon {
+    display: none;
 }
 
 
 
 
-@media (max-width: 1024px) {}
+/*********** le UL = les filtres  ***********/
 
-@media (max-width: 767.98px) {}
+.SectionInfoGroup ul {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 2em;
+}
+
+.SectionInfoGroup ul h2 {
+    display: flex;
+    align-items: center;
+}
+
+.SectionInfoGroup a {
+    display: flex;
+    font-weight: bold;
+    gap: 8px;
+}
+
+.SectionInfoGroup li {
+    display: flex;
+
+    height: 50px;
+    padding: 0px 20px;
+    border-radius: 25px;
+    border: 3px solid rgba(217, 217, 217, 255);
+
+    align-items: center;
+    justify-content: center;
+}
+
+.SectionInfoGroup li:hover {
+    background-color: #deebff;
+}
+
+/*********** Fin filtres  ***********/
+
+.SectionInfoGroup span {
+    display: flex;
+}
+
+.SectionInfoGroup .icon-info {
+    margin: 20px 0 0 0;
+    padding: 0 0 0 25px;
+}
+
+.SectionInfoGroup .icon-info:before {
+    display: inline-block;
+    position: relative;
+    bottom: 1px;
+    right: 25px;
+    margin: 0 -18px 0 0;
+    padding: 3px 6px;
+    font-family: "Font Awesome 5 Free";
+    font-size: 10px;
+    font-weight: 900;
+    line-height: 1;
+    content: "\f129";
+    color: #0065FC;
+    background-color: #ffffff;
+    border: 1px solid #efefef;
+    border-radius: 50%;
+}
+
+/*********** Article Hebergements  ***********/
+#SectionHebergements {
+    grid-row: 2;
+    background-color: var(--main-bg-color);
+    border-radius: 20px;
+    padding: 2em;
+}
+
+#SectionHebergements h2 {
+    padding-bottom: 1.5em;
+}
+
+#SectionHebergements ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5em;
+}
+
+#SectionHebergements ul li a {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#SectionHebergements li {
+    display: block;
+    padding: 7px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
+}
+
+#SectionHebergements ul li a .BoxHebergInfo h3 {
+    padding-top: 10px;
+}
+
+#SectionHebergements ul li a .BoxHebergInfo p {
+    padding-top: 7px;
+    padding-bottom: 5px;
+}
+
+#SectionHebergements ul li a .BoxHebergImG {
+    height: 9em;
+}
+
+#SectionHebergements ul li a .BoxHebergImG img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px 15px 0px 0px;
+}
+
+#SectionHebergements .afficherplus {
+    border: none;
+    background-color: var(--main-bg-color);
+    font-weight: bold;
+    font-size: larger;
+    margin-top: 10px;
+}
+
+/*********** Section Populaires  ***********/
+
+.SectionPopulaires {
+    grid-row: 2;
+    background-color: var(--main-bg-color);
+    border-radius: 20px;
+    padding: 2em;
+}
+
+.SectionPopulaires h2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1.5em;
+
+}
+
+.SectionPopulaires ul {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2.5rem;
+}
+
+.SectionPopulaires a {
+    position: relative;
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 5px;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
+    gap: 10px;
+}
+
+.SectionPopulaires li a .BoxImg {
+    width: 40%;
+    height: 9em;
+}
+
+.SectionPopulaires li a .BoxImg img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px 0px 0px 15px;
+}
 
 
-.SectionPopulaires ul {}
+.SectionPopulaires li a .BoxInfo {
+    width: 60%;
+}
+
+.SectionPopulaires li a .BoxInfo p {
+    padding: 0px;
+}
+
+.BoxNotes {
+    position: absolute;
+    bottom: 10px;
+}
+
+.SectionPopulaires h3 {
+    margin-top: 5px;
+    margin-bottom: 7px;
+}
+
+.SectionPopulaires p {
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+/*********** Section Activités ***********/
+.SectionActivite {
+
+    grid-column: 1 / 3;
+    grid-row: 3;
+
+    border-radius: 20px;
+    padding: 2em;
+    box-sizing: border-box;
+}
+
+.SectionActivite h2 {
+    padding-bottom: 1.5em;
+}
+
+.SectionActivite h3 {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 20px;
+}
+
+.SectionActivite ul {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.SectionActivite li {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+
+.SectionActivite img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
 
 
-.SectionPopulaires ul li a {}
+
+/*********** Footer ***********/
+footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: var(--main-bg-color);
+    /* padding-left: 30px; */
+
+    max-width: 1440px;
+    margin: auto;
+}
+
+footer ul h3,
+footer ul li {
+    padding: 10px;
+}
+
+footer ul {
+    padding-left: 2em;
+}
+
+
+@media (max-width:1440px) {}
+
+
+@media (max-width:1024px)
+/*********Tablette*********/
+    {
+
+    main {
+        grid-template-columns: none;
+    }
+
+    .SectionInfoGroup {
+        grid-column: 1 / 1;
+
+    }
+
+    .SectionInfoGroup ul {
+        display: grid;
+        width: 95%;
+        gap: 7px;
+    }
+
+    .SectionInfoGroup ul h2 {
+        grid-row: 1;
+    }
+
+    .SectionInfoGroup ul li {
+        grid-row: 2;
+    }
+
+    #SectionHebergements {
+        grid-row: 2;
+        grid-column: 1 / 1;
+    }
+
+    .SectionPopulaires {
+        grid-row: 3;
+        grid-column: 1 / 1;
+    }
+
+    .SectionPopulaires ul {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+    }
+
+    .BoxInfo h3 {
+        font-size: 16px;
+    }
+
+    .BoxImg img {
+        width: 111.67px;
+    }
+
+    .SectionActivite {
+        grid-row: 4;
+        grid-column: 1 / 1;
+    }
+
+    .SectionActivite img {
+        height: 200px;
+    }
+
+
+}
+
+
+@media (max-width: 767.98px)
+/*********Mobile*********/
+    {
+
+    body {
+        padding: 0px;
+    }
+
+    main {
+        grid-template-columns: none;
+    }
+
+    /*** Debut Header ***/
+    header {
+        flex-direction: column;
+        height: 100%;
+        padding: 0em;
+    }
+
+    header a {
+        display: flex;
+        justify-content: center;
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+    }
+
+    header nav {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+
+    }
+
+    header nav ul {
+        width: 100%;
+        justify-content: space-around;
+        gap: 0px;
+        flex-wrap: nowrap;
+    }
+
+    header nav ul li {
+        width: 100%;
+        height: 100%;
+    }
+
+    header nav ul li a {
+        text-align: center;
+        border-top: none;
+        border-bottom: solid var(--main-bg-color);
+        padding: 15px 0px 15px 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    header nav ul li a:hover {
+        color: #0065FC;
+        border-top: none;
+        border-bottom: solid #0065FC;
+    }
+
+    /*** Fin Header***/
+
+    .SectionInfoGroup {
+        grid-row: 1;
+        grid-column: 1;
+        padding: 1.5em;
+        margin-top: 10px;
+    }
+
+    .SectionInfoGroup ul li {
+        grid-row: unset;
+    }
+
+    .SectionInfoGroup ul {
+        width: 100%;
+    }
+
+    .BoutonIcon {
+        display: inline-block;
+        /* bonne valeur ? */
+        background-color: var(--main-color);
+        height: 49px;
+        width: 49px;
+        border-radius: 15px;
+
+        border: none;
+        box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
+        position: relative;
+        left: -10px;
+    }
+
+    .BoutonIcon:hover {
+        opacity: 75%;
+    }
+
+    .fa-color-white {
+        color: #F2F2F2;
+        padding: 15px;
+    }
+
+    .BoutonText {
+        display: none;
+    }
+
+
+    /*********Debut Filtres*********/
+    .SectionInfoGroup ul {
+        display: grid;
+    }
+
+    .SectionInfoGroup li {
+        justify-content: start;
+
+    }
+
+    .SectionInfoGroup form input {
+        width: 90%;
+    }
+
+    .SectionInfoGroup ul h2 {
+        grid-row: 1;
+        grid-column: 1 / 3;
+    }
+
+    .SectionInfoGroup ul li .element1 {
+        grid-row: 2;
+    }
+
+    .SectionInfoGroup ul li .element2 {
+        grid-row: 2;
+    }
+
+    .SectionInfoGroup ul li .element3 {
+        grid-row: 3;
+    }
+
+    .SectionInfoGroup ul li .element4 {
+        grid-row: 3;
+    }
+
+    /*********Fin Filtres*********/
+
+    .SectionInfoGroup {
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    .SectionPopulaires {
+        grid-row: 2;
+        grid-column: 1;
+
+        border-radius: 0px;
+    }
+
+    #SectionHebergements {
+        grid-row: 3;
+        grid-column: 1;
+
+        background-color: white;
+    }
+
+    .SectionActivite {
+        grid-row: 4;
+        grid-column: 1;
+    }
+
+    .SectionActivite img {
+        height: 141px;
+    }
+
+    footer {
+        grid-row: 5;
+        grid-column: 1;
+    }
+
+    .SectionPopulaires ul {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    #SectionHebergements ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .SectionActivite ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+
+
+
+}
