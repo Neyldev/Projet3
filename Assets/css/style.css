@@ -258,19 +258,19 @@ input::placeholder {
     padding-bottom: 1.5em;
 }
 
-#SectionHebergements ul {
+#SectionHebergements .cardHeberg {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5em;
 }
 
-#SectionHebergements ul li a {
+#SectionHebergements .cardHeberg a {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-#SectionHebergements li {
+#SectionHebergements a {
     display: block;
     padding: 7px;
     background-color: #ffffff;
@@ -278,20 +278,20 @@ input::placeholder {
     box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
 }
 
-#SectionHebergements ul li a .BoxHebergInfo h3 {
+#SectionHebergements .cardHeberg a .BoxHebergInfo h3 {
     padding-top: 10px;
 }
 
-#SectionHebergements ul li a .BoxHebergInfo p {
+#SectionHebergements .cardHeberg a .BoxHebergInfo p {
     padding-top: 7px;
     padding-bottom: 5px;
 }
 
-#SectionHebergements ul li a .BoxHebergImG {
+#SectionHebergements .cardHeberg a .BoxHebergImG {
     height: 9em;
 }
 
-#SectionHebergements ul li a .BoxHebergImG img {
+#SectionHebergements .cardHeberg a .BoxHebergImG img {
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -323,7 +323,7 @@ input::placeholder {
 
 }
 
-.SectionPopulaires ul {
+.SectionPopulaires .cardPopulaires {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 2.5rem;
@@ -339,12 +339,12 @@ input::placeholder {
     gap: 10px;
 }
 
-.SectionPopulaires li a .BoxImg {
+.SectionPopulaires .cardPopulaires a .BoxImg {
     width: 40%;
     height: 9em;
 }
 
-.SectionPopulaires li a .BoxImg img {
+.SectionPopulaires .cardPopulaires a .BoxImg img {
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -352,11 +352,11 @@ input::placeholder {
 }
 
 
-.SectionPopulaires li a .BoxInfo {
+.SectionPopulaires .cardPopulaires a .BoxInfo {
     width: 60%;
 }
 
-.SectionPopulaires li a .BoxInfo p {
+.SectionPopulaires .cardPopulaires a .BoxInfo p {
     padding: 0px;
 }
 
@@ -460,11 +460,6 @@ footer div h3 {
         grid-column: 1 / 1;
     }
 
-
-
-
-
-
     .SectionInfoGroup .filtres {
         display: grid;
     }
@@ -501,7 +496,7 @@ footer div h3 {
         grid-column: 1 / 1;
     }
 
-    .SectionPopulaires ul {
+    .SectionPopulaires .cardPopulaires {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 1fr;
     }
@@ -705,12 +700,12 @@ footer div h3 {
         grid-column: 1;
     }
 
-    .SectionPopulaires ul {
+    .SectionPopulaires .cardPopulaires {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
     }
 
-    #SectionHebergements ul {
+    #SectionHebergements .cardHeberg {
         display: flex;
         flex-direction: column;
     }
