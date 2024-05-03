@@ -172,6 +172,18 @@ input::placeholder {
 
 /*********** le UL = les filtres  ***********/
 
+
+.SectionInfoGroup .filtres {
+    display: flex;
+    align-items: center;
+}
+
+.SectionInfoGroup .filtres h2 {
+    position: relative;
+    bottom: 16px;
+    padding-right: 20px;
+}
+
 .SectionInfoGroup ul {
     display: flex;
     gap: 20px;
@@ -424,10 +436,14 @@ footer ul li {
     padding: 10px;
 }
 
-footer ul {
+
+footer div {
     padding-left: 2em;
 }
 
+footer div h3 {
+    padding: 10px;
+}
 
 @media (max-width:1440px) {}
 
@@ -442,8 +458,24 @@ footer ul {
 
     .SectionInfoGroup {
         grid-column: 1 / 1;
-
     }
+
+
+
+
+
+
+    .SectionInfoGroup .filtres {
+        display: grid;
+    }
+
+    .SectionInfoGroup .filtres h2 {
+        position: relative;
+        bottom: 0px;
+        padding-right: 0px;
+    }
+
+
 
     .SectionInfoGroup ul {
         display: grid;
@@ -575,7 +607,6 @@ footer ul {
 
     .BoutonIcon {
         display: inline-block;
-        /* bonne valeur ? */
         background-color: var(--main-color);
         height: 49px;
         width: 49px;
@@ -615,9 +646,12 @@ footer ul {
         width: 90%;
     }
 
-    .SectionInfoGroup ul h2 {
-        grid-row: 1;
-        grid-column: 1 / 3;
+    .filtres h2 {
+        padding-bottom: 7px;
+    }
+
+    .SectionInfoGroup .filtres ul {
+        grid-template-columns: 1fr 1fr;
     }
 
     .SectionInfoGroup ul li .element1 {
@@ -691,8 +725,5 @@ footer ul {
         flex-direction: column;
 
     }
-
-
-
 
 }

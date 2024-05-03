@@ -34,20 +34,23 @@
 
             <form action="#" method="get">
                 <i class="fa-color-black fa-solid fa-location-dot"></i>
-                <input type="search" submit placeholder="Marseille, France">
+                <input type="search" placeholder="Marseille, France">
                 <button class="BoutonText">Rechercher</button> <!--Bouton sans Media Query-->
                 <button class="BoutonIcon"><i class="fa-color-white fa-solid fa-magnifying-glass"></i></button>
                 <!--Bouton pour Media Query-->
             </form>
 
-            <ul>
-                <h2>Filtres</h2>
-                <li class="element1"><a href="#"><i class="fa-solid fa-money-bill-wave"></i>Économique</a></li>
-                <li class="element2"><a href="#"><i class="fa-solid fa-person"></i>Familial</a></li>
-                <li class="element3"><a href="#"><i class="fa-solid fa-heart"></i></i>Romantique</a></li>
-                <li class="element4"><a href="#"><i class="fa-solid fa-fire"></i>Nos pépites</a></li>
-            </ul>
 
+            <div class="filtres">
+                <h2>Filtres</h2>
+                <ul>
+                    <li class="element1"><a href="#"><i class="fa-solid fa-money-bill-wave"></i>Économique</a></li>
+                    <li class="element2"><a href="#"><i class="fa-solid fa-person"></i>Familial</a></li>
+                    <li class="element3"><a href="#"><i class="fa-solid fa-heart"></i>Romantique</a></li>
+                    <li class="element4"><a href="#"><i class="fa-solid fa-fire"></i>Nos pépites</a></li>
+                </ul>
+
+            </div>
 
             <p class="icon-info">Plus de 500 logements sont disponibles dans cette ville
             </p>
@@ -267,24 +270,30 @@
 
 
     <footer>
-        <ul class="SectionFooterApropos">
+        <div>
             <h3>À propos</h3>
-            <li><a href="#">Fonctionnement du site</a></li>
-            <li><a href="#">Conditions générales </a></li>
-            <li><a href="#">Données et confidentialité</a></li>
-        </ul>
+            <ul>
+                <li><a href="#">Fonctionnement du site</a></li>
+                <li><a href="#">Conditions générales </a></li>
+                <li><a href="#">Données et confidentialité</a></li>
+            </ul>
+        </div>
 
-        <ul class="SectionHebergementsFooter">
+        <div>
             <h3>Nos hébergements</h3>
-            <li><a href="#">Charte qualité</a></li>
-            <li><a href="#">Proposer votre hôtel</a></li>
-        </ul>
+            <ul>
+                <li><a href="#">Charte qualité</a></li>
+                <li><a href="#">Proposer votre hôtel</a></li>
+            </ul>
+        </div>
 
-        <ul class="SectionAssistance">
+        <div>
             <h3>Assistance</h3>
-            <li><a href="#">Centre d’aide</a></li>
-            <li><a href="#">Nous contacter</a></li>
-        </ul>
+            <ul>
+                <li><a href="#">Centre d’aide</a></li>
+                <li><a href="#">Nous contacter</a></li>
+            </ul>
+        </div>
 
     </footer>
 </body>
